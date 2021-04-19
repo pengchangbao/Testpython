@@ -16,7 +16,6 @@ def readmkdirs():
     with open(dir) as file_obj:
         content = file_obj.read()
         print('content:',content)
-
     # 解释：在上面的程序中，因为Python在读取文件之后将其存入对象file_obj
     # 中，我们通过对该对象进行循环来遍历文件中的每一行，但是却发现，多了空白行，因为在这个文件中，有看不见的换行符，且print语句语句也会加上一个换行符，因此每行的末尾会有两个换行符。要消除多于的空白行可在print语句中调用rstrip()
     # 方法，
@@ -113,6 +112,7 @@ print('hello')
 # writersFiles()
 mainTest()
 
+# 自动遍历
 def forEachFiles():
     dir="C:\\Users\\Administrator\\Desktop\\新建文件夹"
     files=os.walk(dir)
